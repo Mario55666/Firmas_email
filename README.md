@@ -1,194 +1,63 @@
 # Firmario
 
-Estudio de firmas corporativas para correo electrónico. Es una sola página HTML, CSS y JavaScript que genera firmas con **tablas y estilos en línea**, el formato que aceptan Gmail, Outlook, Apple Mail, Yahoo Mail y Thunderbird.
+Firmario es una aplicación web de un solo archivo (`index.html`) que genera firmas de correo electrónico en HTML. Las firmas usan tablas y estilos en línea, con un ancho máximo de 600 px.
 
-- **Página publicada:** https://claude.ai/artifact/FpC3t7uZka5H1usxSx5mwq
-- **Demo:** Hogar de Niños Posada de Belén (Callao, Perú)
+## Uso
 
----
+1. Abrir `index.html` en un navegador de escritorio. No requiere instalación ni servidor.
+2. Completar los datos de contacto.
+3. Cargar un logo en PNG o SVG, o indicar su URL pública.
+4. Elegir la organización, el estilo y el tipo de iconos.
+5. Pulsar **Copiar firma** (texto enriquecido) o **Copiar HTML** (código).
+6. Pegar la firma en la configuración del cliente de correo, según las instrucciones de la sección «Cómo insertar la firma en tu correo».
 
-## Contenido de la carpeta
+## Campos de datos
 
-| Archivo | Descripción |
-|---|---|
-| `index.html` | La aplicación completa: estructura, estilos, lógica, logo de demostración y guía de instalación. No necesita servidor ni dependencias. |
-| `logo-posada-de-belen.png` | Logo de la demo con fondo transparente (360 × 360 px), listo para subirlo al sitio web y usarlo como URL pública. |
-| `README.md` | Este documento. |
+Nombre y apellido, cargo, empresa o área, correo, celular, teléfono fijo, sitio web, dirección, Facebook, LinkedIn, Instagram, TikTok, X, lema (opcional) y aviso legal o de confidencialidad (opcional).
 
-Para usarla, abre `index.html` en Chrome, Edge, Firefox o Safari.
+## Logo
 
----
+- Formatos admitidos: PNG y SVG. El archivo se convierte a PNG dentro del navegador.
+- Ancho de visualización: de 56 a 220 px, en pasos de 2 px. Valor inicial: 104 px.
+- Sin logo, la firma muestra un monograma con las iniciales de la empresa.
+- Campo **URL pública del logo**: la firma enlaza la imagen alojada en lugar de incrustarla. Es el método indicado para Gmail y Thunderbird.
 
-## Funciones
+## Organizaciones
 
-### 20 estilos de diseño
-Cada estilo usa solo recursos que un correo admite: tipografía, paleta, tipo de filete divisorio, marco del logo, iconografía y una franja de colores de marca.
-
-| N.º | Estilo | Rasgos principales |
-|---|---|---|
-| 01 | Minimalism | Una familia tipográfica, gris cálido, filete de 1 px |
-| 02 | Maximalism | Paleta de joyas, serif de alto contraste, franja de cinco colores |
-| 03 | Surreal design | Serif lírica, violeta onírico, filete punteado |
-| 04 | Swiss design | Grotesca pesada, rojo señal, filete negro de 3 px |
-| 05 | Y2K design | Plata y azul eléctrico con acento magenta |
-| 06 | Editorial | Cursiva Playfair, versalitas espaciadas, tono vino |
-| 07 | Pixel art | Nombre en tipografía de 8 bits e iconos pixelados |
-| 08 | Clay style | Formas redondeadas, lila y coral |
-| 09 | Glassmorphism | Panel azul hielo con bordes finos |
-| 10 | Cyberpunk | Mayúsculas técnicas, monoespaciada, neón contenido |
-| 11 | Pop art | Primarios planos y contorno negro |
-| 12 | Retro | Atardecer setentero en franjas |
-| 13 | Collage art | Máquina de escribir y papeles superpuestos |
-| 14 | Vector art | Geometría plana, azul y coral |
-| 15 | Futuristic | Mayúsculas espaciadas, oro fino, azul noche |
-| 16 | Handwritten | Nombre manuscrito en tinta azul sobre datos formales |
-| 17 | Bohemian | Cursiva Cormorant, salvia y óxido |
-| 18 | Graffiti | Nombre en rotulador con acentos urbanos |
-| 19 | Aurora | Azul profundo y franja de cinco tonos boreales |
-| 20 | Victorian style | Serif antigua, doble filete dorado, monograma fraktur |
-
-### Organización de la firma
 | Familia | Variantes |
 |---|---|
-| **Horizontal** | Clásica (logo, divisor, datos) · Tres columnas (logo, identidad, contacto) |
-| **Vertical** | Alineada a la izquierda · Centrada |
-| **Lateral** | Panel de marca a la izquierda · Panel de marca a la derecha |
+| Horizontal | Clásica, Tres columnas |
+| Vertical | Alineada, Centrada |
+| Lateral | Panel izquierdo, Panel derecho |
 
-### Identidad de marca
-- Subida de logo en **PNG o SVG**. Los SVG se convierten automáticamente a PNG nítido, porque Gmail y Outlook no muestran SVG.
-- Control del ancho del logo (56–220 px).
-- Campo **URL pública del logo**: si se completa, la firma copiada enlaza la imagen en vez de incrustarla (necesario para Gmail y Yahoo).
-- Sin logo, se muestra un monograma con las iniciales de la institución.
+## Estilos
 
-### Iconos de contacto
-- **Según el estilo** (predeterminado): cada estilo tiene su propia iconografía (forma, grosor de trazo, color y marco).
-- **Sin iconos · Etiquetas · Símbolos:** son texto y funcionan en cualquier cliente.
-- **Línea · Sólido · Círculo · Cuadrado:** iconos en imagen PNG, generados con los colores de cada estilo.
-- Cubren correo, celular, teléfono, web, dirección, Facebook, LinkedIn, Instagram, TikTok y X.
+20 estilos: Minimalism, Maximalism, Surreal design, Swiss design, Y2K design, Editorial, Pixel art, Clay style, Glassmorphism, Cyberpunk, Pop art, Retro, Collage art, Vector art, Futuristic, Handwritten, Bohemian, Graffiti, Aurora y Victorian style.
 
-### Datos disponibles
-Nombre, cargo, institución, correo, celular, teléfono fijo, sitio web, dirección, Facebook, LinkedIn, Instagram, TikTok, X, lema y aviso legal o de confidencialidad. Los datos se guardan en el navegador (`localStorage`).
+## Iconos de contacto
 
-### Exportación
-- **Copiar firma:** copia la firma formateada para pegarla en el editor de firmas.
-- **Copiar HTML:** copia el código fuente para Thunderbird, Outlook clásico o Apple Mail.
-- **Contador de caracteres:** avisa si se supera el límite de 10 000 caracteres de Gmail.
+8 modos: Según el estilo, Sin iconos, Etiquetas, Símbolos, Línea, Sólido, Círculo y Cuadrado.
 
----
+## Clientes de correo documentados
 
-## Datos de la demo
+- Gmail (navegador)
+- Outlook web y nuevo Outlook (outlook.com, Microsoft 365 y app nueva de Windows)
+- Outlook clásico para Windows (editor o archivo `.htm`)
+- Apple Mail para macOS (Ajustes o archivo `.mailsignature`)
+- Yahoo Mail (navegador)
+- Thunderbird (código HTML pegado directamente)
+- Móviles iPhone y Android (soporte limitado)
 
-| Campo | Valor |
-|---|---|
-| Nombre | Fernando Eslava |
-| Cargo | Director del Hogar |
-| Institución | Hogar de Niños Posada de Belén |
-| Correo | hermanatierracallao@yahoo.es |
-| Celular | 999 124 794 |
-| Teléfono | (511) 429 6307 |
-| Web | www.hogarposadadebelen.org.pe |
-| Dirección | Av. 2 de Mayo 771, Cercado del Callao 07021, Perú |
-| Facebook | https://www.facebook.com/PosadaDeBelenCallao |
-| Instagram | https://www.instagram.com/hogarposadadebelen_oficial |
-| TikTok | https://www.tiktok.com/@posadadebelen |
+Gmail admite firmas de hasta 10 000 caracteres. La interfaz muestra un contador de caracteres junto a los botones de copia.
 
-Configuración inicial: organización **Lateral · Panel izquierdo**, estilo **Handwritten**, iconos **Según el estilo**. El botón «Restaurar datos y logo de ejemplo» vuelve a estos valores.
+## Datos de ejemplo
 
----
+El archivo trae precargada una marca ficticia: Molle & Grano · Tostadores de café (firmante: Lucía Paredes, Jefa de Tostado), con logo de muestra. El dominio `molleygrano.pe`, los teléfonos, la dirección y los perfiles de redes son inventados. El botón **Restaurar datos y logo de ejemplo** vuelve a cargar estos valores.
 
-## Cómo instalar la firma
+## Almacenamiento
 
-### Paso previo: publicar el logo
-1. Sube `logo-posada-de-belen.png` al sitio web, por ejemplo `https://www.hogarposadadebelen.org.pe/logo-firma.png`.
-2. Comprueba que la dirección empiece por `https://` y se abra en una ventana privada sin iniciar sesión. Los enlaces para compartir de Google Drive o Dropbox no sirven, porque abren una página de vista previa y no la imagen.
-3. Pega la dirección en **URL pública del logo**.
+Los datos del formulario, el estilo, la organización y el logo cargado se guardan en el `localStorage` del navegador con la clave `firmario-demo-molle-1`. No se envían a ningún servidor. El logo de muestra no se guarda.
 
-### Métodos
-- **Método A, «Copiar firma»:** pegar con `Ctrl+V` / `⌘+V` en el editor de firmas del cliente.
-- **Método B, «Copiar HTML»:** insertar el código fuente. Solo en Thunderbird, Outlook clásico (archivo `.htm`) y Apple Mail (archivo `.mailsignature`).
+## Dependencias externas
 
-| Cliente | Método | Logo | Iconos recomendados |
-|---|---|---|---|
-| Gmail (web) | A | URL pública | Etiquetas o Símbolos |
-| Yahoo Mail (web) | A | URL pública | Etiquetas o Símbolos |
-| Outlook web y nuevo Outlook | A | URL pública o incrustado | Cualquiera |
-| Outlook clásico (Windows) | A, o B con `.htm` | URL pública o incrustado | Cualquiera |
-| Apple Mail (macOS) | A, o B con `.mailsignature` | URL pública o incrustado | Cualquiera |
-| Thunderbird | B | URL pública | Cualquiera |
-
-### Yahoo Mail
-1. Pulsa **Copiar firma**.
-2. En mail.yahoo.com: **⚙ Configuración → Más configuración → Escribir correo electrónico**.
-3. En **Firma**, activa el interruptor de la cuenta.
-4. Pega en el cuadro; los cambios se guardan solos.
-
-### Gmail
-1. Pulsa **Copiar firma**.
-2. **⚙ → Ver toda la configuración → General → Firma → + Crear nueva**.
-3. Pega en el cuadro.
-4. En **Valores predeterminados de firma**, elígela para mensajes nuevos y para respuestas.
-5. Pulsa **Guardar cambios** al final de la página.
-
-### Outlook web y nuevo Outlook
-1. **⚙ Configuración → Cuentas → Firmas → + Nueva firma**.
-2. Pega, asígnala como predeterminada y pulsa **Guardar**.
-
-### Outlook clásico (Windows)
-- **Opción 1:** **Archivo → Opciones → Correo → Firmas → Nueva**, pega y acepta.
-- **Opción 2:**
-  1. Cierra Outlook.
-  2. Pulsa `Win+R`, escribe `%APPDATA%\Microsoft\Signatures` y pulsa Enter.
-  3. Guarda el HTML como `Firma corporativa.htm` (UTF-8) en esa carpeta.
-  4. Abre Outlook y elige la firma en **Firmas**.
-
-### Apple Mail
-- **Opción 1:**
-  1. **Mail → Ajustes → Firmas → +**.
-  2. Desmarca «Usar siempre mi fuente predeterminada del mensaje».
-  3. Pega la firma.
-- **Opción 2:**
-  1. Crea una firma provisional y cierra Mail.
-  2. Abre `~/Library/Mail/V…/MailData/Signatures/`.
-  3. Reemplaza el cuerpo del `.mailsignature` más reciente por el HTML, conservando los encabezados.
-  4. Guarda y bloquea el archivo (`⌘+I`).
-
-### Thunderbird
-1. **☰ → Configuración de cuentas → Texto de la firma**.
-2. Marca **Usar HTML** y pega el código.
-
-### Móviles
-Las apps de Gmail, Outlook y Mail de iPhone solo guardan firmas de formato básico. Para que se use la firma configurada en la web, deja vacía la firma de la app móvil de Gmail.
-
----
-
-## Compatibilidad y limitaciones
-
-- **Imágenes incrustadas:** Gmail y Yahoo pueden eliminarlas al pegar. Usa la URL pública del logo y los iconos Etiquetas o Símbolos.
-- **Límite de Gmail:** 10 000 caracteres. Si se supera, quita el aviso legal o las redes, o elige «Sin iconos».
-- **Fuentes web:** se ven en Apple Mail y en algunos clientes. El resto usa la fuente de respaldo de cada estilo (Arial, Georgia, Verdana…).
-- **Outlook clásico:** ignora las esquinas redondeadas.
-- **Modo oscuro:** algunos clientes invierten los colores. Conviene un logo con buen contraste o con contorno claro.
-- **Ancho máximo:** 600 px.
-
----
-
-## Personalización para desarrolladores
-
-Todo está en `index.html`, dentro del bloque `<script>`:
-
-| Constante | Qué define |
-|---|---|
-| `DEFAULTS` | Datos de la demo |
-| `STYLES` | Los 20 estilos: tipografías (`font`, `nf`), colores (`fg`, `mut`, `acc`, `co`, `tint`), filete (`rule`), tamaños, franja (`strip`) y monograma (`mono`) |
-| `ICO` | Iconografía de cada estilo: modo, grosor (`sw`), radio (`r`), colores (`col`, `gc`, `lc`), borde (`ring`), `pixel` |
-| `LAYOUTS` | Las seis organizaciones y sus miniaturas |
-| `SAMPLE_LOGO` | Logo de demostración en base64 |
-| `buildSignature()` | Genera el HTML final de la firma con tablas y estilos en línea |
-
-Para añadir un estilo, agrega un objeto a `STYLES` con un `id` nuevo y su entrada en `ICO`.
-
----
-
-## Créditos
-
-Diseñado por **d3magindesign-2026** · Mg Mario Quiroz Martinez
+Tipografías de Google Fonts (`fonts.googleapis.com`). Sin conexión, el navegador usa las fuentes de respaldo declaradas en cada estilo.
