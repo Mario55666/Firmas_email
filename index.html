@@ -1,0 +1,862 @@
+<title>Firmario</title>
+<meta name="description" content="Estudio de firmas corporativas de correo electrónico: 20 estilos, organización horizontal, vertical y lateral, logo de marca PNG/SVG e iconos de contacto, exportables a Gmail, Outlook y Apple Mail.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Italiana&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;600;800&family=Syne:wght@500;700;800&family=Josefin+Sans:wght@300;400;600&family=Press+Start+2P&family=Nunito:wght@500;700;900&family=Manrope:wght@400;600;800&family=Share+Tech+Mono&family=Chakra+Petch:wght@600;700&family=Bangers&family=Karla:wght@400;600;700&family=Righteous&family=Special+Elite&family=Abril+Fatface&family=Lexend:wght@300;400;700&family=Orbitron:wght@400;500&family=Outfit:wght@300;400;700&family=Caveat:wght@700&family=Permanent+Marker&family=IM+Fell+English:ital@0;1&family=UnifrakturMaguntia&display=swap">
+<style>
+:root{
+  --bg:#F1F2EE; --surface:#FFFFFF; --sunk:#E7E9E3; --ink:#16171A; --muted:#5C6066; --line:#D5D8D1;
+  --accent:#7A1E3A; --accent-ink:#FFFFFF; --focus:#2B59C3;
+  --paper:#FFFFFF; --paper-line:#E3E4E0; --paper-ink:#1E1F22; --paper-mut:#6B6E73;
+  --f-display:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --f-body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){ color-scheme:dark;
+    --bg:#101113; --surface:#191B1E; --sunk:#0C0D0E; --ink:#ECEDE9; --muted:#9A9EA5; --line:#2C2F34;
+    --accent:#E0708F; --accent-ink:#1A0A10; --focus:#8FB0FF; }
+}
+:root[data-theme="dark"]{ color-scheme:dark;
+  --bg:#101113; --surface:#191B1E; --sunk:#0C0D0E; --ink:#ECEDE9; --muted:#9A9EA5; --line:#2C2F34;
+  --accent:#E0708F; --accent-ink:#1A0A10; --focus:#8FB0FF; }
+
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font:15px/1.55 var(--f-body); padding-inline:clamp(16px,4vw,44px); padding-block:0 64px}
+:focus-visible{outline:2px solid var(--focus); outline-offset:2px}
+.wrap{max-width:1320px; margin-inline:auto}
+
+.top{display:flex; align-items:center; justify-content:space-between; gap:16px; padding-block:18px; border-bottom:1px solid var(--line)}
+.brand{display:flex; align-items:center; gap:10px; font:800 20px/1 var(--f-display); letter-spacing:-.02em}
+.brand-mark{width:28px; height:28px; border-radius:6px; background:var(--ink); color:var(--bg); display:grid; place-items:center; font:600 13px/1 var(--f-mono)}
+.top nav{display:flex; gap:20px; font-size:14px}
+.top nav a{color:var(--muted); text-decoration:none}
+.top nav a:hover{color:var(--ink)}
+
+.intro{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:24px 48px; padding-block:40px 30px; align-items:end}
+.eyebrow{font:600 11px/1 var(--f-mono); letter-spacing:.14em; text-transform:uppercase; color:var(--accent)}
+h1{font:800 clamp(32px,4.6vw,54px)/1.02 var(--f-display); letter-spacing:-.035em; margin:12px 0 0; text-wrap:balance}
+.intro p{margin:0; color:var(--muted); max-width:52ch}
+.facts{display:flex; flex-wrap:wrap; gap:8px 22px; margin-top:14px; font:12px var(--f-mono); color:var(--muted)}
+.facts b{color:var(--ink); font-weight:600}
+
+/* ---------- studio ---------- */
+.studio{display:grid; grid-template-columns:minmax(0,440px) minmax(0,1fr); gap:28px; align-items:start; border-top:1px solid var(--line); padding-top:28px}
+.panel{display:grid; gap:26px}
+.group h2{font:600 11px/1 var(--f-mono); letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:0 0 12px; display:flex; justify-content:space-between; gap:8px}
+.group h2 span{color:var(--ink); letter-spacing:0; text-transform:none; font-family:var(--f-body)}
+.form{display:grid; grid-template-columns:1fr 1fr; gap:10px 12px}
+.field{display:flex; flex-direction:column; gap:5px; min-width:0}
+.field.wide{grid-column:1/-1}
+.field label{font-size:12px; font-weight:600; color:var(--muted)}
+.field input,.field textarea{font:inherit; font-size:14px; color:var(--ink); background:var(--surface); border:1px solid var(--line); border-radius:7px; padding:8px 10px; min-width:0; width:100%}
+.field textarea{resize:vertical; min-height:58px; font-size:13px}
+.field input:focus,.field textarea:focus{border-color:var(--accent); outline:none; box-shadow:0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent)}
+.hint{font-size:12px; color:var(--muted); margin:6px 0 0; line-height:1.45}
+
+.logo-box{display:grid; grid-template-columns:120px 1fr; gap:14px; align-items:center; background:var(--surface); border:1px solid var(--line); border-radius:10px; padding:12px}
+.logo-thumb{height:72px; border-radius:6px; background:#fff repeating-conic-gradient(#EEE 0 25%, #fff 0 50%) 0 0/12px 12px; display:grid; place-items:center; overflow:hidden; border:1px solid var(--paper-line)}
+.logo-thumb img{max-width:90%; max-height:60px}
+.logo-thumb span{font:11px var(--f-mono); color:#777}
+.logo-actions{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.logo-meta{font-size:12px; color:var(--muted); margin-top:6px}
+.file-btn{position:relative; overflow:hidden}
+.file-btn input{position:absolute; inset:0; opacity:0; cursor:pointer}
+.range{display:flex; align-items:center; gap:10px; margin-top:12px; font-size:12px; color:var(--muted)}
+.range input{flex:1; accent-color:var(--accent)}
+.range output{font:12px var(--f-mono); color:var(--ink); min-width:48px; text-align:right}
+
+.opts{display:grid; gap:10px}
+.opt-row{display:grid; grid-template-columns:78px 1fr 1fr; gap:8px; align-items:stretch}
+.opt-row > span{font-size:12px; font-weight:600; align-self:center}
+.tile{border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:9px; padding:8px 10px; cursor:pointer; display:flex; align-items:center; gap:10px; font:500 12.5px/1.2 var(--f-body); text-align:left}
+.tile svg{width:54px; height:32px; flex:none; color:var(--muted)}
+.tile[aria-pressed="true"]{border-color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink)}
+.tile[aria-pressed="true"] svg{color:var(--accent)}
+.icons{display:grid; grid-template-columns:repeat(auto-fill,minmax(128px,1fr)); gap:8px}
+.itile{border:1px solid var(--line); background:var(--surface); color:var(--ink); border-radius:9px; padding:8px; cursor:pointer; display:grid; gap:7px; font:500 12px/1.2 var(--f-body); text-align:left}
+.itile .sample{background:var(--paper); border-radius:5px; height:34px; display:flex; align-items:center; justify-content:center; gap:9px; color:#333; font:700 9px/1 Arial,sans-serif; letter-spacing:.06em; text-transform:uppercase; border:1px solid var(--paper-line)}
+.itile .sample img{display:block}
+.itile[aria-pressed="true"]{border-color:var(--ink); box-shadow:inset 0 0 0 1px var(--ink)}
+
+.btn{font:600 13px/1 var(--f-body); border-radius:999px; padding:10px 16px; cursor:pointer; border:1px solid var(--ink); background:var(--ink); color:var(--bg); white-space:nowrap}
+.btn.ghost{background:transparent; color:var(--ink); border-color:var(--line)}
+.btn.sm{padding:7px 12px; font-size:12px}
+.btn:hover{filter:brightness(1.12)}
+.linkbtn{background:none; border:0; padding:0; font:inherit; font-size:12px; color:var(--accent); cursor:pointer; text-decoration:underline; text-underline-offset:3px}
+
+.stage{position:sticky; top:calc(env(safe-area-inset-top,0px) + 16px)}
+.mail{background:var(--paper); color:var(--paper-ink); border:1px solid var(--line); border-radius:12px; overflow:hidden; box-shadow:0 24px 48px -34px rgba(10,12,20,.45)}
+.mail-bar{display:flex; align-items:center; gap:7px; padding:10px 14px; background:#F3F4F1; border-bottom:1px solid var(--paper-line)}
+.dot{width:10px; height:10px; border-radius:50%; background:#D6D8D2}
+.mail-bar b{margin-left:10px; font:600 12px var(--f-body); color:#555}
+.mail-head{padding:14px 22px 12px; border-bottom:1px solid var(--paper-line); display:grid; gap:3px; font-size:13px; color:var(--paper-mut)}
+.mail-head strong{color:var(--paper-ink); font-weight:600}
+.mail-subject{font:600 17px/1.25 var(--f-display); color:var(--paper-ink); margin-bottom:4px}
+.mail-body{padding:18px 22px 24px; font:14px/1.6 Arial, Helvetica, sans-serif}
+.mail-body p{margin:0 0 10px; max-width:64ch}
+.sig-host{margin-top:18px; padding-top:16px; overflow-x:auto}
+.sig-host::before{content:"-- "; display:block; color:#999; font:13px Arial,sans-serif; margin-bottom:8px}
+.current{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:10px; margin-top:14px}
+.current-name{font:600 15px/1.3 var(--f-display)}
+.current-name small{display:block; font:12px var(--f-mono); color:var(--muted)}
+.actions{display:flex; flex-wrap:wrap; gap:8px}
+.toast{font-size:13px; color:var(--accent); min-height:1.3em; margin-top:8px}
+details.code{margin-top:8px; border:1px solid var(--line); border-radius:10px; background:var(--surface)}
+details.code summary{cursor:pointer; padding:10px 14px; font:600 12px var(--f-mono); color:var(--muted)}
+details.code textarea{display:block; width:100%; height:190px; border:0; border-top:1px solid var(--line); background:var(--sunk); color:var(--ink); font:11.5px/1.5 var(--f-mono); padding:12px 14px; resize:vertical; border-radius:0 0 10px 10px}
+
+/* ---------- gallery ---------- */
+.section-head{display:flex; flex-wrap:wrap; align-items:end; justify-content:space-between; gap:12px 24px; padding-block:48px 20px}
+.section-head h2{font:800 clamp(26px,3vw,36px)/1.05 var(--f-display); letter-spacing:-.03em; margin:8px 0 0; text-wrap:balance}
+.section-head p{margin:8px 0 0; color:var(--muted); max-width:60ch}
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,560px),1fr)); gap:20px}
+.card{background:var(--surface); border:1px solid var(--line); border-radius:12px; overflow:hidden; display:flex; flex-direction:column}
+.card.is-selected{border-color:var(--accent); box-shadow:0 0 0 1px var(--accent)}
+.card-meta{display:flex; align-items:center; gap:12px; padding:12px 16px; border-bottom:1px solid var(--line)}
+.card-meta .num{font:600 12px var(--f-mono); color:var(--muted); font-variant-numeric:tabular-nums}
+.card-meta h3{font:600 15px/1.2 var(--f-display); margin:0}
+.card-meta p{margin:2px 0 0; font-size:12.5px; color:var(--muted)}
+.card-meta .use{margin-left:auto}
+.card.is-selected .use{background:var(--accent); border-color:var(--accent); color:var(--accent-ink)}
+.card-paper{background:var(--paper); padding:24px 22px; overflow-x:auto; flex:1; cursor:pointer; display:flex; align-items:center}
+.card-paper > *{flex:none}
+
+.notes{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr)); gap:22px}
+.notes article{border-top:2px solid var(--ink); padding-top:14px}
+.notes h3{font:600 17px/1.2 var(--f-display); margin:0 0 8px}
+.notes ol,.notes ul{margin:0; padding-left:18px; color:var(--muted); font-size:14px; display:grid; gap:4px}
+.notes code{font:12px var(--f-mono); background:var(--sunk); padding:1px 5px; border-radius:4px; color:var(--ink)}
+.methods{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr)); gap:18px}
+.methods article{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:18px 20px}
+.methods h3{font:600 18px/1.2 var(--f-display); margin:8px 0}
+.methods p{margin:0; color:var(--muted); font-size:14px; max-width:62ch}
+.methods code,.guide code{font:12px var(--f-mono); background:var(--sunk); padding:1px 5px; border-radius:4px; color:var(--ink)}
+.table-wrap{overflow-x:auto; margin-top:22px; border:1px solid var(--line); border-radius:12px; background:var(--surface)}
+.matrix{width:100%; border-collapse:collapse; font-size:14px; min-width:560px}
+.matrix th{font:600 11px var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-align:left; padding:10px 14px; border-bottom:1px solid var(--line)}
+.matrix td{padding:10px 14px; border-bottom:1px solid var(--line)}
+.matrix tr:last-child td{border-bottom:0}
+.matrix td:first-child{font-weight:600}
+.guide{margin-top:22px; display:grid; gap:10px}
+.guide details{background:var(--surface); border:1px solid var(--line); border-radius:12px}
+.guide summary{cursor:pointer; padding:14px 18px; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; list-style:none}
+.guide summary::-webkit-details-marker{display:none}
+.guide summary::before{content:"+"; font:600 16px var(--f-mono); color:var(--accent); width:14px}
+.guide details[open] summary::before{content:"\2013"}
+.guide summary span{font:600 17px/1.2 var(--f-display)}
+.guide summary small{color:var(--muted); font-size:13px}
+.guide ol,.guide ul{margin:0; padding:0 22px 16px 50px; display:grid; gap:7px; font-size:14.5px; max-width:84ch}
+.guide h4{font:600 12px var(--f-mono); letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:6px 22px 10px 32px}
+.guide a{color:var(--accent)}
+.warn{margin:0 22px 16px 32px; padding:10px 14px; border-left:3px solid var(--accent); background:color-mix(in srgb, var(--accent) 7%, var(--surface)); font-size:13.5px; max-width:84ch}
+.count{font:12px var(--f-mono); color:var(--muted); margin-top:4px}
+.count.over{color:#C2410C}
+.credit b{color:var(--ink); font-weight:600}
+footer.foot{margin-top:48px; padding-top:18px; border-top:1px solid var(--line); font-size:13px; color:var(--muted); display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px}
+
+@media (max-width:980px){ .studio{grid-template-columns:1fr} .stage{position:static} .intro{grid-template-columns:1fr} }
+@media (max-width:520px){ .form{grid-template-columns:1fr} .top nav{display:none} .opt-row{grid-template-columns:1fr 1fr} .opt-row > span{grid-column:1/-1} .logo-box{grid-template-columns:1fr} }
+@media (prefers-reduced-motion: reduce){ *{scroll-behavior:auto!important} }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="brand-mark">F</span>Firmario</div>
+    <nav aria-label="Secciones"><a href="#estudio">Estudio</a><a href="#estilos">Estilos</a><a href="#compatibilidad">Compatibilidad</a></nav>
+  </header>
+
+  <section class="intro">
+    <div>
+      <div class="eyebrow">Firmas corporativas de correo electrónico</div>
+      <h1>La última línea de cada correo también habla de tu marca.</h1>
+    </div>
+    <div>
+      <p>Carga tu logo, elige cómo se organiza la firma y qué iconos acompañan tus datos. Veinte estilos interpretados con sobriedad, construidos con tablas y estilos en línea: lo que ves es exactamente lo que se pega en tu cliente de correo.</p>
+      <div class="facts"><span><b>20</b> estilos</span><span><b>3</b> organizaciones · 6 variantes</span><span><b>7</b> estilos de iconos</span><span><b>≤ 600 px</b> de ancho</span></div>
+    </div>
+  </section>
+
+  <section class="studio" id="estudio">
+    <div class="panel">
+      <div class="group">
+        <h2>Datos de contacto</h2>
+        <form class="form" id="form" autocomplete="off">
+          <div class="field"><label for="f-name">Nombre y apellido</label><input id="f-name" name="name"></div>
+          <div class="field"><label for="f-role">Cargo</label><input id="f-role" name="role"></div>
+          <div class="field wide"><label for="f-company">Empresa o área</label><input id="f-company" name="company"></div>
+          <div class="field"><label for="f-email">Correo</label><input id="f-email" name="email" type="email"></div>
+          <div class="field"><label for="f-mobile">Celular</label><input id="f-mobile" name="mobile"></div>
+          <div class="field"><label for="f-phone">Teléfono fijo</label><input id="f-phone" name="phone"></div>
+          <div class="field"><label for="f-web">Sitio web</label><input id="f-web" name="web"></div>
+          <div class="field wide"><label for="f-address">Dirección</label><input id="f-address" name="address"></div>
+          <div class="field"><label for="f-facebook">Facebook</label><input id="f-facebook" name="facebook" placeholder="página o URL"></div>
+          <div class="field"><label for="f-linkedin">LinkedIn</label><input id="f-linkedin" name="linkedin" placeholder="usuario o URL"></div>
+          <div class="field"><label for="f-instagram">Instagram</label><input id="f-instagram" name="instagram" placeholder="usuario o URL"></div>
+          <div class="field"><label for="f-tiktok">TikTok</label><input id="f-tiktok" name="tiktok" placeholder="@usuario o URL"></div>
+          <div class="field"><label for="f-x">X</label><input id="f-x" name="x" placeholder="usuario o URL"></div>
+          <div class="field"><label for="f-tagline">Lema (opcional)</label><input id="f-tagline" name="tagline"></div>
+          <div class="field wide"><label for="f-legal">Aviso legal o de confidencialidad (opcional)</label><textarea id="f-legal" name="legal"></textarea></div>
+        </form>
+      </div>
+
+      <div class="group">
+        <h2>Identidad de marca</h2>
+        <div class="logo-box">
+          <div class="logo-thumb" id="logo-thumb"><span>Sin logo</span></div>
+          <div>
+            <div class="logo-actions">
+              <label class="btn sm file-btn">Subir logo PNG o SVG<input type="file" id="logo-file" accept="image/png,image/svg+xml,.svg,.png"></label>
+              <button type="button" class="btn ghost sm" id="logo-remove">Quitar</button>
+            </div>
+            <div class="logo-meta" id="logo-meta"></div>
+          </div>
+        </div>
+        <div class="range"><label for="logo-w">Ancho del logo</label><input type="range" id="logo-w" min="56" max="220" step="2"><output id="logo-w-out" for="logo-w"></output></div>
+        <div class="field wide" style="margin-top:12px"><label for="logo-url">URL pública del logo (recomendada para Gmail)</label><input id="logo-url" placeholder="https://tuempresa.com/logo-firma.png"></div>
+        <p class="hint">Los SVG se convierten a PNG nítido porque Gmail y Outlook no muestran SVG. Si indicas una URL, la firma copiada enlaza esa imagen; si no, la incrusta.</p>
+      </div>
+
+      <div class="group">
+        <h2>Organización <span id="lay-name"></span></h2>
+        <div class="opts" id="layouts"></div>
+      </div>
+
+      <div class="group">
+        <h2>Iconos de contacto <span id="ico-name"></span></h2>
+        <div class="icons" id="icons"></div>
+        <p class="hint">«Según el estilo» da a cada una de las 20 firmas su propia iconografía: forma, grosor, color y marco. Etiquetas y Símbolos son texto y funcionan en cualquier cliente. Los iconos en imagen se ven en Outlook y Apple Mail; Gmail puede descartarlos al pegar.</p>
+      </div>
+      <div><button type="button" class="linkbtn" id="reset">Restaurar datos y logo de ejemplo</button></div>
+    </div>
+
+    <div class="stage">
+      <div class="mail" aria-label="Vista previa de la firma en un correo">
+        <div class="mail-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><b>Mensaje nuevo</b></div>
+        <div class="mail-head">
+          <div class="mail-subject">Agradecimiento por su apoyo · Campaña de Navidad</div>
+          <div>De: <strong id="m-from"></strong></div>
+          <div>Para: <strong>Voluntariado · Colegio San Martín</strong></div>
+        </div>
+        <div class="mail-body">
+          <p>Estimados amigos:</p>
+          <p>En nombre de los niños y del equipo del Hogar, les agradecemos la donación de útiles escolares y la visita del sábado. Les enviaremos las fotos de la entrega y el detalle de la próxima campaña de Navidad. Quedo atento a cualquier consulta.</p>
+          <p>Saludos cordiales,</p>
+          <div class="sig-host" id="preview"></div>
+        </div>
+      </div>
+      <div class="current">
+        <div class="current-name" id="cur-name"></div>
+        <div class="actions">
+          <button type="button" class="btn" id="copy-rich">Copiar firma</button>
+          <button type="button" class="btn ghost" id="copy-html">Copiar HTML</button>
+        </div>
+      </div>
+      <div class="count" id="count"></div>
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <details class="code">
+        <summary>Código HTML de la firma</summary>
+        <textarea id="code" readonly aria-label="Código HTML de la firma"></textarea>
+      </details>
+    </div>
+  </section>
+
+  <section id="estilos">
+    <div class="section-head">
+      <div>
+        <div class="eyebrow">Galería</div>
+        <h2>Veinte estilos, una misma seriedad</h2>
+        <p>Cada estilo traduce su corriente a los recursos que un correo sí admite: tipografía, color, filetes, marcos del logo y una franja de marca. Todas usan tu logo, tu organización y tus iconos. Toca una firma para llevarla al estudio.</p>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section id="compatibilidad">
+    <div class="section-head"><div><div class="eyebrow">Guía de instalación</div><h2>Cómo insertar la firma en tu correo</h2>
+      <p>Hay dos formas de llevar la firma a tu cliente de correo. La tabla indica cuál corresponde a cada programa; abajo están los pasos detallados.</p></div></div>
+
+    <div class="methods">
+      <article>
+        <div class="eyebrow">Método A · el más común</div>
+        <h3>Pegar la firma ya formateada</h3>
+        <p>El botón <b>Copiar firma</b> copia la firma tal como se ve: colores, tipografías e imágenes. Se pega con <code>Ctrl+V</code> (<code>⌘+V</code> en Mac) dentro del editor de firmas, igual que pegarías texto de una página web. Sirve para Gmail, Outlook web, el nuevo Outlook, Outlook clásico y Apple Mail.</p>
+      </article>
+      <article>
+        <div class="eyebrow">Método B · código HTML</div>
+        <h3>Insertar el código fuente</h3>
+        <p>El botón <b>Copiar HTML</b> copia el código (tablas y estilos en línea). Solo algunos programas aceptan código: Thunderbird lo pega directamente, y Outlook clásico y Apple Mail lo leen desde un archivo de firma. Gmail y Outlook web <b>no</b> aceptan código: si pegas el HTML ahí, verás las etiquetas como texto.</p>
+      </article>
+    </div>
+
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead><tr><th>Cliente</th><th>Método</th><th>Logo</th><th>Iconos recomendados</th></tr></thead>
+        <tbody>
+          <tr><td>Gmail (web)</td><td>A · Copiar firma</td><td>URL pública</td><td>Etiquetas o Símbolos</td></tr>
+          <tr><td>Outlook web y nuevo Outlook</td><td>A · Copiar firma</td><td>URL pública o incrustado</td><td>Cualquiera</td></tr>
+          <tr><td>Outlook clásico (Windows)</td><td>A, o B con archivo .htm</td><td>URL pública o incrustado</td><td>Cualquiera</td></tr>
+          <tr><td>Apple Mail (macOS)</td><td>A, o B con archivo .mailsignature</td><td>URL pública o incrustado</td><td>Cualquiera</td></tr>
+          <tr><td>Yahoo Mail (web)</td><td>A · Copiar firma</td><td>URL pública</td><td>Etiquetas o Símbolos</td></tr>
+          <tr><td>Thunderbird</td><td>B · Copiar HTML</td><td>URL pública</td><td>Cualquiera</td></tr>
+          <tr><td>iPhone / Android</td><td>Limitado (ver abajo)</td><td>URL pública</td><td>Etiquetas o Símbolos</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="guide">
+      <details open>
+        <summary><span>Antes de empezar</span><small>Preparar el logo y revisar la firma</small></summary>
+        <ol>
+          <li>Completa tus datos, sube tu logo y elige estilo, organización e iconos en el <a href="#estudio">estudio</a>.</li>
+          <li><b>Publica el logo en internet</b> si vas a usar Gmail o Thunderbird: súbelo a tu sitio web (por ejemplo <code>https://tuempresa.com/firma/logo.png</code>) o a un servicio de alojamiento de imágenes. La dirección debe empezar por <code>https://</code>, terminar en <code>.png</code> y abrirse en una ventana privada del navegador sin iniciar sesión. Los enlaces para compartir de Google Drive o Dropbox no sirven, porque abren una página de vista previa y no la imagen.</li>
+          <li>Pega esa dirección en <b>URL pública del logo</b>. La firma copiada enlazará la imagen en lugar de incrustarla.</li>
+          <li>Revisa el contador de caracteres junto a los botones de copia. Gmail admite como máximo 10&nbsp;000 caracteres; si lo superas, quita el aviso legal o las redes, o usa iconos Etiquetas.</li>
+          <li>Copia desde Chrome, Edge o Safari en un ordenador. Pegar desde el móvil pierde el formato.</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary><span>Gmail</span><small>Método A · gmail.com en el navegador</small></summary>
+        <ol>
+          <li>En Firmario pulsa <b>Copiar firma</b>.</li>
+          <li>Abre <a href="https://mail.google.com" target="_blank" rel="noopener">mail.google.com</a>, pulsa el engranaje <b>⚙</b> (arriba a la derecha) y luego <b>Ver toda la configuración</b>.</li>
+          <li>En la pestaña <b>General</b>, baja hasta la sección <b>Firma</b> y pulsa <b>+ Crear nueva</b>. Escribe un nombre, por ejemplo «Firma corporativa».</li>
+          <li>Haz clic dentro del cuadro de la firma y pega con <code>Ctrl+V</code> / <code>⌘+V</code>. Debe verse con colores y logo; si ves etiquetas como <code>&lt;table&gt;</code>, copiaste el HTML en vez de la firma.</li>
+          <li>En <b>Valores predeterminados de firma</b>, elige la firma para <b>Mensajes nuevos</b> y para <b>Respuestas y reenvíos</b>.</li>
+          <li>Baja al final de la página y pulsa <b>Guardar cambios</b>. Si no guardas, la firma se pierde.</li>
+          <li>Redacta un correo nuevo para comprobarla.</li>
+        </ol>
+        <p class="warn"><b>Si el logo o los iconos desaparecen:</b> Gmail elimina las imágenes incrustadas al pegar. Indica la URL pública del logo y usa iconos Etiquetas o Símbolos. También puedes borrar el hueco del logo, pulsar el botón <b>Insertar imagen</b> del editor de firma, elegir <b>Dirección web (URL)</b> y pegar la dirección del logo.</p>
+        <p class="warn"><b>Si aparece «La firma es demasiado larga»:</b> se superaron los 10&nbsp;000 caracteres. Quita el aviso legal o las redes sociales, o elige <b>Sin iconos</b>.</p>
+      </details>
+
+      <details>
+        <summary><span>Outlook web y nuevo Outlook</span><small>Método A · outlook.com, Microsoft 365 y la app nueva de Windows</small></summary>
+        <ol>
+          <li>Pulsa <b>Copiar firma</b>.</li>
+          <li>En Outlook pulsa el engranaje <b>⚙ Configuración</b> y ve a <b>Cuentas → Firmas</b> (en algunas versiones: <b>Correo → Redactar y responder</b>).</li>
+          <li>Pulsa <b>+ Nueva firma</b> y escribe un nombre.</li>
+          <li>Haz clic en el editor y pega con <code>Ctrl+V</code>.</li>
+          <li>En <b>Seleccionar firmas predeterminadas</b>, asígnala a <b>Mensajes nuevos</b> y a <b>Respuestas y reenvíos</b>.</li>
+          <li>Pulsa <b>Guardar</b>.</li>
+        </ol>
+        <p class="warn">Con cuentas de Microsoft 365 y outlook.com, la firma se guarda en la cuenta y suele aparecer también en el nuevo Outlook para Windows y en Outlook para Mac.</p>
+      </details>
+
+      <details>
+        <summary><span>Outlook clásico para Windows</span><small>Método A desde el editor, o método B con archivo .htm</small></summary>
+        <h4>Opción 1 · pegar la firma</h4>
+        <ol>
+          <li>Pulsa <b>Copiar firma</b>.</li>
+          <li>En Outlook: <b>Archivo → Opciones → Correo → Firmas…</b></li>
+          <li>Pulsa <b>Nueva</b>, escribe un nombre y acepta.</li>
+          <li>Pega en el cuadro <b>Editar firma</b> con <code>Ctrl+V</code>.</li>
+          <li>A la derecha, elige la firma en <b>Mensajes nuevos</b> y en <b>Respuestas o reenvíos</b>, y pulsa <b>Aceptar</b>.</li>
+        </ol>
+        <h4>Opción 2 · insertar el código HTML</h4>
+        <ol>
+          <li>Pulsa <b>Copiar HTML</b>.</li>
+          <li>Cierra Outlook. Pulsa <code>Win+R</code>, escribe <code>%APPDATA%\Microsoft\Signatures</code> y pulsa Enter. Se abre la carpeta de firmas (créala si no existe).</li>
+          <li>Abre el Bloc de notas, pega el código y usa <b>Archivo → Guardar como</b>: nombre <code>Firma corporativa.htm</code>, tipo <b>Todos los archivos</b>, codificación <b>UTF-8</b>.</li>
+          <li>Abre Outlook y ve a <b>Archivo → Opciones → Correo → Firmas…</b>: aparece «Firma corporativa». Asígnala como predeterminada y acepta.</li>
+        </ol>
+        <p class="warn">Outlook clásico ignora las esquinas redondeadas y las fuentes web, y usa la fuente de respaldo de cada estilo (Arial, Georgia, Verdana…). La estructura y los colores se conservan. Evita abrir y guardar esa firma en el editor de Outlook: puede reescribir el código.</p>
+      </details>
+
+      <details>
+        <summary><span>Apple Mail (macOS)</span><small>Método A desde Ajustes, o método B con archivo .mailsignature</small></summary>
+        <h4>Opción 1 · pegar la firma</h4>
+        <ol>
+          <li>Pulsa <b>Copiar firma</b> (mejor desde Safari).</li>
+          <li>En Mail: <b>Mail → Ajustes… → Firmas</b>.</li>
+          <li>Elige la cuenta en la columna izquierda y pulsa <b>+</b>.</li>
+          <li>Desmarca <b>Usar siempre mi fuente predeterminada del mensaje</b>; si queda marcada, Mail reemplaza tus tipografías.</li>
+          <li>Borra el texto de ejemplo del panel derecho y pega con <code>⌘+V</code>.</li>
+          <li>Cierra la ventana (se guarda sola) y elige la firma en el menú <b>Firma</b> de la cuenta.</li>
+        </ol>
+        <h4>Opción 2 · insertar el código HTML</h4>
+        <ol>
+          <li>Crea en Mail una firma provisional con cualquier texto, por ejemplo «temporal», y cierra Mail con <code>⌘+Q</code>.</li>
+          <li>En Finder pulsa <code>⇧+⌘+G</code> y abre <code>~/Library/Mail/</code>. Entra en la carpeta <code>V</code> con el número más alto (por ejemplo <code>V10</code>) y luego en <code>MailData/Signatures</code>. Si Mail usa iCloud Drive, busca en <code>~/Library/Mobile Documents/com~apple~mail/Data/</code>, dentro de <code>V…/Signatures</code>.</li>
+          <li>Abre con TextEdit el archivo <code>.mailsignature</code> más reciente. Conserva las líneas de encabezado del principio (las que empiezan por <code>Content-Type</code>, <code>Message-Id</code>, <code>Mime-Version</code>…) y la línea en blanco que las sigue.</li>
+          <li>Borra todo lo que hay después, pega el código de <b>Copiar HTML</b> y guarda.</li>
+          <li>Selecciona el archivo, pulsa <code>⌘+I</code> y marca <b>Bloqueado</b> para que Mail no lo sobrescriba.</li>
+          <li>Abre Mail y redacta un correo con esa firma.</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary><span>Yahoo Mail</span><small>Método A · mail.yahoo.com en el navegador</small></summary>
+        <ol>
+          <li>Indica la <b>URL pública del logo</b> (por ejemplo, en el sitio web del Hogar) y pulsa <b>Copiar firma</b>.</li>
+          <li>Abre <a href="https://mail.yahoo.com" target="_blank" rel="noopener">mail.yahoo.com</a>, pulsa <b>⚙ Configuración</b> (arriba a la derecha) y luego <b>Más configuración</b>.</li>
+          <li>En el menú izquierdo elige <b>Escribir correo electrónico</b>.</li>
+          <li>En <b>Firma</b>, activa el interruptor junto a tu dirección de correo.</li>
+          <li>Haz clic en el cuadro de la firma y pega con <code>Ctrl+V</code>. Los cambios se guardan solos.</li>
+          <li>Pulsa <b>Volver al buzón</b> y redacta un correo para comprobarla.</li>
+        </ol>
+        <p class="warn">Yahoo puede quitar las imágenes incrustadas. Si el logo o los iconos no aparecen, usa la URL pública del logo y los iconos <b>Etiquetas</b> o <b>Símbolos</b>.</p>
+      </details>
+
+      <details>
+        <summary><span>Thunderbird</span><small>Método B · pega el código directamente</small></summary>
+        <ol>
+          <li>Indica la URL pública del logo y pulsa <b>Copiar HTML</b>.</li>
+          <li>En Thunderbird: <b>☰ → Configuración de cuentas</b> y selecciona tu dirección de correo.</li>
+          <li>En <b>Texto de la firma</b>, marca <b>Usar HTML</b>.</li>
+          <li>Pega el código en el cuadro y cierra la pestaña; se guarda sola.</li>
+          <li>Otra opción: guarda el código como <code>firma.html</code>, marca <b>Adjuntar la firma desde un archivo</b> y elige ese archivo.</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary><span>Móviles (iPhone y Android)</span><small>Soporte limitado</small></summary>
+        <ul>
+          <li><b>Gmail en el móvil</b> tiene una firma propia de solo texto. Déjala vacía para que se use la firma configurada en la web.</li>
+          <li><b>Outlook en el móvil</b> usa también una firma propia y sencilla, que se configura en los ajustes de la app.</li>
+          <li><b>Mail de iPhone</b> (<code>Ajustes → Apps → Mail → Firma</code>) solo guarda formato básico. Para acercarte al diseño, envíate un correo con la firma desde el ordenador, cópiala en el iPhone y pégala en Firma. Si se pierde el formato, agita el teléfono y elige <b>Deshacer cambio de atributos</b>.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary><span>Comprobar y solucionar problemas</span><small>Antes de usarla con clientes</small></summary>
+        <ul>
+          <li><b>Pruébala:</b> envíate un correo a una cuenta de Gmail y a una de Outlook, y ábrelo en el ordenador y en el móvil.</li>
+          <li><b>Veo etiquetas <code>&lt;table&gt;</code> en el texto:</b> pegaste el código en un editor que no acepta HTML. Usa <b>Copiar firma</b>.</li>
+          <li><b>El logo sale como archivo adjunto o no aparece:</b> usa la URL pública; algunos clientes convierten las imágenes incrustadas en adjuntos.</li>
+          <li><b>Cambia la tipografía:</b> el cliente no tiene la fuente web y usa la de respaldo, que es lo esperado. En Apple Mail, desmarca «Usar siempre mi fuente predeterminada».</li>
+          <li><b>Se ve distinto en modo oscuro:</b> algunos clientes invierten los colores. Un logo con fondo transparente y trazo oscuro puede perderse; usa una versión con contorno claro o sobre fondo blanco.</li>
+          <li><b>Hay espacio de más entre líneas:</b> pega la firma en un cuadro vacío, sin líneas en blanco antes.</li>
+        </ul>
+      </details>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <span>Firmario · firmas HTML para correo · tablas y estilos en línea, máximo 600 px</span>
+    <span class="credit">Diseñado por <b>d3magindesign-2026</b> · Mg Mario Quiroz Martinez</span>
+  </footer>
+</div>
+
+<script>
+(function(){
+  const DEFAULTS = {
+    name:"Fernando Eslava", role:"Director del Hogar", company:"Hogar de Niños Posada de Belén",
+    email:"hermanatierracallao@yahoo.es", mobile:"999 124 794", phone:"(511) 429 6307", web:"www.hogarposadadebelen.org.pe",
+    address:"Av. 2 de Mayo 771, Cercado del Callao 07021, Perú", facebook:"https://www.facebook.com/PosadaDeBelenCallao", linkedin:"", instagram:"https://www.instagram.com/hogarposadadebelen_oficial", tiktok:"https://www.tiktok.com/@posadadebelen", x:"",
+    tagline:"Un hogar para cada niño",
+    legal:"Este mensaje y sus anexos son confidenciales y están dirigidos exclusivamente a su destinatario. Si lo recibió por error, notifíquelo al remitente y elimínelo."
+  };
+
+  /* ---------------- organización ---------------- */
+  const LAYOUTS = [
+    {fam:"Horizontal", items:[
+      {id:"horizontal", name:"Clásica", svg:'<rect x="4" y="9" width="14" height="14" rx="2"/><rect x="22" y="5" width="1.2" height="22"/><rect x="27" y="7" width="22" height="4"/><rect x="27" y="14" width="16" height="2.5"/><rect x="27" y="19" width="19" height="2.5"/><rect x="27" y="24" width="14" height="2.5"/>'},
+      {id:"columns", name:"Tres columnas", svg:'<rect x="2" y="9" width="12" height="14" rx="2"/><rect x="17" y="5" width="1.2" height="22"/><rect x="21" y="12" width="13" height="3.5"/><rect x="21" y="18" width="9" height="2.5"/><rect x="37" y="5" width="1.2" height="22"/><rect x="41" y="9" width="13" height="2.5"/><rect x="41" y="15" width="11" height="2.5"/><rect x="41" y="21" width="13" height="2.5"/>'}]},
+    {fam:"Vertical", items:[
+      {id:"vertical", name:"Alineada", svg:'<rect x="6" y="2" width="16" height="7" rx="1.5"/><rect x="6" y="12" width="26" height="3.5"/><rect x="6" y="17.5" width="18" height="2.5"/><rect x="6" y="22" width="40" height="1"/><rect x="6" y="25" width="22" height="2.2"/><rect x="6" y="29" width="18" height="2"/>'},
+      {id:"vcenter", name:"Centrada", svg:'<rect x="19" y="2" width="16" height="7" rx="1.5"/><rect x="14" y="12" width="26" height="3.5"/><rect x="18" y="17.5" width="18" height="2.5"/><rect x="7" y="22" width="40" height="1"/><rect x="8" y="26" width="38" height="2.2"/>'}]},
+    {fam:"Lateral", items:[
+      {id:"side-left", name:"Panel izquierdo", svg:'<rect x="1" y="2" width="20" height="28" rx="2" opacity=".3"/><rect x="1" y="2" width="2" height="28"/><rect x="6" y="11" width="11" height="10" rx="1.5"/><rect x="26" y="7" width="22" height="4"/><rect x="26" y="14" width="16" height="2.5"/><rect x="26" y="19" width="19" height="2.5"/><rect x="26" y="24" width="14" height="2.5"/>'},
+      {id:"side-right", name:"Panel derecho", svg:'<rect x="33" y="2" width="20" height="28" rx="2" opacity=".3"/><rect x="51" y="2" width="2" height="28"/><rect x="37" y="11" width="11" height="10" rx="1.5"/><rect x="4" y="7" width="22" height="4"/><rect x="4" y="14" width="16" height="2.5"/><rect x="4" y="19" width="19" height="2.5"/><rect x="4" y="24" width="14" height="2.5"/>'}]}
+  ];
+  const LAYOUT_NAME = {}; LAYOUTS.forEach(g=>g.items.forEach(i=>LAYOUT_NAME[i.id]=`${g.fam} · ${i.name}`));
+
+  /* ---------------- iconos ---------------- */
+  const ICON_MODES = [
+    {id:"auto", name:"Según el estilo"}, {id:"none", name:"Sin iconos"}, {id:"labels", name:"Etiquetas"}, {id:"symbols", name:"Símbolos"},
+    {id:"line", name:"Línea"}, {id:"solid", name:"Sólido"}, {id:"circle", name:"Círculo"}, {id:"square", name:"Cuadrado"}
+  ];
+  const LABELS = {email:"Email", mobile:"Cel.", phone:"Tel.", web:"Web", address:"Dir."};
+  const SYMBOLS = {mobile:"\u260F", email:"✉︎", phone:"☎︎", web:"⊕", address:"⌖"};
+  const PHONE = "M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z";
+  const PIN = "M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z";
+
+  function rr(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+  function circ(c,x,y,r){ c.beginPath(); c.arc(x,y,r,0,Math.PI*2); }
+  function glyph(c, kind, solid, fg, knock, sw=2){
+    c.lineWidth = sw; c.lineCap = "round"; c.lineJoin = "round"; c.strokeStyle = fg; c.fillStyle = fg;
+    const paint = () => solid ? c.fill() : c.stroke();
+    const detail = solid ? knock : fg;
+    switch(kind){
+      case "email": rr(c,3,5,18,14,2.5); paint(); c.beginPath(); c.moveTo(4,7.5); c.lineTo(12,13); c.lineTo(20,7.5); c.strokeStyle = detail; c.lineWidth = solid?1.8:sw; c.stroke(); break;
+      case "phone": { const p = new Path2D(PHONE); c.save(); c.translate(1,1); c.scale(.92,.92); solid ? c.fill(p) : c.stroke(p); c.restore(); break; }
+      case "mobile": rr(c,6.5,2.5,11,19,2.5); paint(); c.strokeStyle = detail; c.lineWidth = solid?1.6:sw; c.beginPath(); c.moveTo(10.5,18.2); c.lineTo(13.5,18.2); c.stroke(); break;
+      case "facebook": rr(c,3,3,18,18,4); paint(); c.fillStyle = detail; c.font = "bold 15px Arial, sans-serif"; c.textAlign = "center"; c.textBaseline = "alphabetic"; c.fillText("f",13,19.5); break;
+      case "tiktok": rr(c,3,3,18,18,4.5); paint(); c.strokeStyle = detail; c.fillStyle = detail; c.lineWidth = solid?1.8:sw;
+        c.beginPath(); c.moveTo(13,6.5); c.lineTo(13,15); c.stroke(); circ(c,10.4,15.2,2.6); c.stroke();
+        c.beginPath(); c.moveTo(13,6.5); c.quadraticCurveTo(14,9.3,17,9.5); c.stroke(); break;
+      case "web": circ(c,12,12,9); paint(); c.strokeStyle = detail; c.lineWidth = solid?1.6:sw; c.beginPath(); c.ellipse(12,12,3.8,9,0,0,Math.PI*2); c.stroke(); c.beginPath(); c.moveTo(3.5,12); c.lineTo(20.5,12); c.stroke(); break;
+      case "address": { const p = new Path2D(PIN); solid ? c.fill(p) : c.stroke(p); circ(c,12,10,2.6); if (solid){ c.fillStyle = knock; c.fill(); } else c.stroke(); break; }
+      case "linkedin": rr(c,3,3,18,18,3.5); paint(); c.fillStyle = detail; c.font = "bold 11px Arial, sans-serif"; c.textAlign = "center"; c.textBaseline = "alphabetic"; c.fillText("in",12.3,16.6); break;
+      case "instagram": rr(c,3,3,18,18,5.5); paint(); c.strokeStyle = detail; c.lineWidth = solid?1.8:sw; circ(c,12,12,4); c.stroke(); circ(c,16.8,7.2,1.2); c.fillStyle = detail; c.fill(); break;
+      case "x": if (solid){ rr(c,3,3,18,18,4); c.fill(); }
+        c.strokeStyle = detail; c.lineWidth = solid?1.8:sw; c.beginPath(); c.moveTo(7,6.5); c.lineTo(17,17.5); c.moveTo(17,6.5); c.lineTo(7,17.5); c.stroke(); break;
+    }
+  }
+  /* Iconografía propia de cada estilo: tipo, grosor de trazo, forma y color del contenedor */
+  const ICO = {
+    minimal:{mode:"line", sw:1.3, col:"#1A1A1A"},
+    maximal:{mode:"circle", col:"#8E1B4B", gc:"#F6E3B4", ring:"#C99A2E"},
+    surreal:{mode:"line", sw:1.3, col:"#6A4FA3"},
+    swiss:{mode:"square", r:0, col:"#E30613", sw:2.4},
+    y2k:{mode:"circle", col:"#3D5AFE", ring:"#C0C4D6"},
+    editorial:{mode:"labels", col:"#6D1A2B"},
+    pixel:{mode:"square", r:0, col:"#5B3FD6", pixel:true},
+    clay:{mode:"square", r:8, col:"#C25B8C", sw:2.4},
+    glass:{mode:"square", r:7, col:"#EEF4FF", gc:"#2F6BFF", lc:"#2F6BFF", ring:"#BFD1FA", sw:1.8},
+    cyber:{mode:"square", r:0, col:"#0E1320", gc:"#00E5FF", lc:"#00A3C4", sw:1.8},
+    pop:{mode:"circle", col:"#E4002B", ring:"#111111", sw:2.4},
+    retro:{mode:"circle", col:"#E8702A", sw:2.2},
+    collage:{mode:"labels", col:"#8E1B2C"},
+    vector:{mode:"solid", col:"#2F6BFF"},
+    future:{mode:"line", sw:1.1, col:"#B8954A"},
+    hand:{mode:"line", sw:1.9, col:"#1D3B8B"},
+    boho:{mode:"line", sw:1.3, col:"#B5562F"},
+    graffiti:{mode:"square", r:3, col:"#1E1E1E", gc:"#FFE600", sw:2.4},
+    aurora:{mode:"circle", col:"#0E9F8A"},
+    victorian:{mode:"symbols", col:"#9C7A2B"}
+  };
+  const icoOf = st => ICO[st.id] || {mode:"line", col:st.acc};
+  const modeOf = st => state.icons === "auto" ? icoOf(st).mode : state.icons;
+  const iconCache = new Map();
+  function iconImg(kind, mode, st, inline){
+    const I = icoOf(st), boxed = mode==="circle" || mode==="square";
+    const d = boxed ? 20 : 15, key = [kind, mode, st.id].join("|");
+    let src = iconCache.get(key);
+    if (!src){
+      const px = I.pixel ? d : d*3, cv = document.createElement("canvas"); cv.width = cv.height = px;
+      const c = cv.getContext("2d"); c.scale(px/24, px/24);
+      const sw = I.sw || 2, lc = I.lc || I.col;
+      if (boxed){
+        c.fillStyle = I.col; mode==="circle" ? circ(c,12,12,12) : rr(c,0,0,24,24, I.r ?? 5); c.fill();
+        if (I.ring){ c.strokeStyle = I.ring; c.lineWidth = 1.6; mode==="circle" ? circ(c,12,12,11.2) : rr(c,.8,.8,22.4,22.4, Math.max(0,(I.r ?? 5)-.8)); c.stroke(); }
+        c.translate(12,12); c.scale(.6,.6); c.translate(-12,-12); glyph(c, kind, false, I.gc || "#FFFFFF", I.col, sw*1.15);
+      } else glyph(c, kind, mode==="solid", lc, "#FFFFFF", sw);
+      if (I.pixel){ // trazo pixelado: se dibuja a 1x y se amplía sin suavizado
+        const big = document.createElement("canvas"); big.width = big.height = d*3;
+        const b = big.getContext("2d"); b.imageSmoothingEnabled = false; b.drawImage(cv, 0, 0, d*3, d*3);
+        src = big.toDataURL("image/png");
+      } else src = cv.toDataURL("image/png");
+      iconCache.set(key, src);
+    }
+    return `<img src="${src}" width="${d}" height="${d}" alt="" style="display:${inline?"inline-block":"block"};${inline?"vertical-align:middle;":""}width:${d}px;height:${d}px;border:0;">`;
+  }
+
+  /* ---------------- 20 estilos (sobrios, compatibles con correo) ---------------- */
+  const BASE = {base:12.5, nW:700, nS:19, nCase:"none", nLS:0, nIt:false, roleCase:"none", roleLS:0, coCase:"none", coLS:0, sep:"·", tagIt:true, panelR:"0", strip:null, stripH:4};
+  const S = (o) => Object.assign({}, BASE, o);
+  const STYLES = [
+    S({id:"minimal", name:"Minimalism", desc:"Una sola familia tipográfica, gris cálido y un filete de un píxel.",
+      font:"'DM Sans', Helvetica, Arial, sans-serif", fg:"#1A1A1A", mut:"#85857F", acc:"#1A1A1A", co:"#1A1A1A", tint:"#F5F5F3", rule:"1px solid #E2E2DE", nS:17, nW:500, coCase:"uppercase", coLS:2,
+      mono:{bg:"#FFFFFF", fg:"#1A1A1A", br:"1px solid #1A1A1A", r:"0"}}),
+    S({id:"maximal", name:"Maximalism", desc:"Paleta de joyas, serif de alto contraste y franja de cinco colores.",
+      font:"Karla, Arial, sans-serif", nf:"'Playfair Display', Georgia, serif", fg:"#1F1030", mut:"#6B5B73", acc:"#8E1B4B", nameC:"#8E1B4B", co:"#B08422", tint:"#F7F0E6", rule:"3px double #C99A2E", nS:23, coCase:"uppercase", coLS:2, sep:"◆", sepC:"#C99A2E",
+      strip:[["#8E1B4B",30],["#C99A2E",14],["#1F5F5B",20],["#2B2F6B",22],["#D9643A",14]], stripH:6, mono:{bg:"#8E1B4B", fg:"#F6E3B4", br:"2px solid #C99A2E", r:"50%"}}),
+    S({id:"surreal", name:"Surreal design", desc:"Serif lírica, violeta onírico, filete punteado y horizonte pastel.",
+      font:"'Cormorant Garamond', Georgia, serif", nf:"Italiana, Georgia, serif", base:14.5, fg:"#24203A", mut:"#5C5775", acc:"#6A4FA3", co:"#6A4FA3", tint:"#F1EEF8", rule:"1px dotted #6A4FA3", nS:25, nW:400, nLS:1, sep:"○",
+      strip:[["#BFD6F0",34],["#E8CFE0",33],["#F4E3C6",33]], stripH:3, mono:{bg:"#F1EEF8", fg:"#6A4FA3", br:"1px solid #6A4FA3", r:"50%"}}),
+    S({id:"swiss", name:"Swiss design", desc:"Grotesca pesada, rojo señal, retícula y filete negro de 3 px.",
+      font:"Archivo, 'Helvetica Neue', Arial, sans-serif", fg:"#111111", mut:"#555555", acc:"#E30613", co:"#E30613", tint:"#F2F2F2", rule:"3px solid #111111", nS:20, nW:800, nLS:-0.4, roleCase:"uppercase", roleLS:1, coCase:"uppercase", sep:"/", sepC:"#E30613", tagIt:false,
+      strip:[["#E30613",16],["#111111",84]], stripH:5, mono:{bg:"#E30613", fg:"#FFFFFF", r:"0"}}),
+    S({id:"y2k", name:"Y2K design", desc:"Plata y azul eléctrico con acento magenta, geometría redondeada.",
+      font:"Syne, Verdana, sans-serif", fg:"#1C1A3A", mut:"#6E6C8F", acc:"#3D5AFE", co:"#3D5AFE", tint:"#EFF0FA", rule:"1px solid #C7C9E6", nS:19, nW:800, sep:"✦", sepC:"#E040A0", panelR:"14px",
+      strip:[["#C0C4D6",25],["#3D5AFE",25],["#9A7BFF",25],["#E040A0",25]], stripH:3, mono:{bg:"#3D5AFE", fg:"#FFFFFF", br:"2px solid #C0C4D6", r:"50%"}}),
+    S({id:"editorial", name:"Editorial", desc:"Cabecera de revista: cursiva Playfair, versalitas espaciadas y vino.",
+      font:"'Josefin Sans', Arial, sans-serif", nf:"'Playfair Display', Georgia, serif", fg:"#141212", mut:"#6A625A", acc:"#6D1A2B", co:"#6D1A2B", tint:"#F4F0EA", rule:"1px solid #141212", nS:23, nW:400, nIt:true, coCase:"uppercase", coLS:3, roleCase:"uppercase", roleLS:1, sep:"—",
+      mono:{bg:"#6D1A2B", fg:"#F4F0EA", r:"0", font:"'Playfair Display', Georgia, serif"}}),
+    S({id:"pixel", name:"Pixel art", desc:"Nombre en tipografía de 8 bits, datos en monoespaciada y franja de píxeles.",
+      font:"'JetBrains Mono', Consolas, 'Courier New', monospace", nf:"'Press Start 2P', 'Courier New', monospace", base:12, fg:"#1B1A33", mut:"#5E5B86", acc:"#5B3FD6", co:"#5B3FD6", tint:"#F0EEFB", rule:"2px dashed #5B3FD6", nS:12, nW:400, sep:"■", sepC:"#FF5A5F", tagIt:false,
+      strip:[["#5B3FD6",12.5],["#8A73F0",12.5],["#FF5A5F",12.5],["#FFC53D",12.5],["#5B3FD6",12.5],["#8A73F0",12.5],["#FF5A5F",12.5],["#FFC53D",12.5]], stripH:6, mono:{bg:"#5B3FD6", fg:"#FFFFFF", r:"0", font:"'Press Start 2P', monospace"}}),
+    S({id:"clay", name:"Clay style", desc:"Formas redondeadas, lila suave y coral, como un néctar.",
+      font:"Nunito, Verdana, sans-serif", fg:"#3E2B5A", mut:"#7C6A95", acc:"#C25B8C", co:"#C25B8C", tint:"#F6F0FC", rule:"2px solid #EADFF5", nS:19, nW:900, sep:"•", panelR:"18px",
+      mono:{bg:"#FFB4A2", fg:"#FFFFFF", r:"16px"}}),
+    S({id:"glass", name:"Glassmorphism", desc:"Panel translúcido de azul hielo, bordes finos y tipografía Manrope.",
+      font:"Manrope, Arial, sans-serif", fg:"#13233F", mut:"#5F6F8C", acc:"#2F6BFF", co:"#2F6BFF", tint:"#EEF4FF", rule:"1px solid #D5E1FA", nS:19, nW:800, panelR:"14px",
+      mono:{bg:"#EEF4FF", fg:"#2F6BFF", br:"1px solid #BFD1FA", r:"12px"}}),
+    S({id:"cyber", name:"Cyberpunk", desc:"Mayúsculas técnicas, datos monoespaciados y neón contenido.",
+      font:"'Share Tech Mono', Consolas, 'Courier New', monospace", nf:"'Chakra Petch', Arial, sans-serif", base:13, fg:"#0E1320", mut:"#56607A", acc:"#E6007E", co:"#00A3C4", tint:"#EAF9FC", rule:"1px solid #00A3C4", nS:19, nCase:"uppercase", nLS:1, roleCase:"uppercase", sep:"//", sepC:"#E6007E", tagIt:false,
+      strip:[["#00A3C4",42],["#E6007E",40],["#F5D400",18]], stripH:3, mono:{bg:"#0E1320", fg:"#00E5FF", br:"1px solid #00A3C4", r:"0"}}),
+    S({id:"pop", name:"Pop art", desc:"Primarios planos, contorno negro y rótulo de cómic en el nombre.",
+      font:"Karla, Arial, sans-serif", nf:"Bangers, Impact, sans-serif", fg:"#111111", mut:"#3A3A3A", acc:"#E4002B", co:"#0057FF", nameC:"#E4002B", tint:"#FFF6BF", rule:"2px solid #111111", nS:25, nW:400, nLS:1, sep:"★", sepC:"#E4002B", tagIt:false,
+      strip:[["#E4002B",33],["#FFDE00",34],["#0057FF",33]], stripH:6, mono:{bg:"#FFDE00", fg:"#111111", br:"2px solid #111111", r:"50%"}}),
+    S({id:"retro", name:"Retro", desc:"Atardecer setentero en franjas y display redondeado.",
+      font:"Karla, Arial, sans-serif", nf:"Righteous, Arial, sans-serif", fg:"#3A1F1A", mut:"#7A5344", acc:"#C2452D", co:"#C2452D", nameC:"#8C2F39", tint:"#FBF1DF", rule:"2px solid #E8702A", nS:21, nW:400, sep:"•", panelR:"10px",
+      strip:[["#F2A541",25],["#E8702A",25],["#C2452D",25],["#8C2F39",25]], stripH:5, mono:{bg:"#E8702A", fg:"#FBF1DF", r:"50%"}}),
+    S({id:"collage", name:"Collage art", desc:"Máquina de escribir, serif de cartel y franja de papeles superpuestos.",
+      font:"'Special Elite', 'Courier New', monospace", nf:"'Abril Fatface', Georgia, serif", fg:"#1A1512", mut:"#4A4036", acc:"#8E1B2C", co:"#8E1B2C", tint:"#EFE6D6", rule:"1px dashed #1A1512", nS:21, nW:400, sep:"×",
+      strip:[["#C8B08A",30],["#8E1B2C",12],["#2E4A62",38],["#E9C46A",20]], stripH:5, mono:{bg:"#2E4A62", fg:"#FFFFFF", br:"3px solid #E9C46A", r:"0", font:"'Abril Fatface', Georgia, serif"}}),
+    S({id:"vector", name:"Vector art", desc:"Geometría plana, azul de marca y coral como contrapunto.",
+      font:"Lexend, Verdana, sans-serif", fg:"#10214A", mut:"#5B6B8F", acc:"#2F6BFF", co:"#FF7A59", tint:"#EAF3FF", rule:"2px solid #2F6BFF", nS:19, nW:700, panelR:"12px",
+      strip:[["#2F6BFF",72],["#FF7A59",28]], stripH:4, mono:{bg:"#2F6BFF", fg:"#FFFFFF", r:"50%"}}),
+    S({id:"future", name:"Futuristic", desc:"Mayúsculas espaciadas, oro fino y azul noche.",
+      font:"Outfit, Arial, sans-serif", nf:"Orbitron, Arial, sans-serif", fg:"#0B1020", mut:"#6C7390", acc:"#B8954A", co:"#B8954A", tint:"#F3F1EC", rule:"1px solid #B8954A", nS:15, nW:500, nCase:"uppercase", nLS:4, roleCase:"uppercase", roleLS:2, coCase:"uppercase", coLS:3, sep:"—", tagIt:false,
+      mono:{bg:"#0B1020", fg:"#B8954A", br:"1px solid #B8954A", r:"50%", font:"Orbitron, Arial, sans-serif"}}),
+    S({id:"hand", name:"Handwritten", desc:"El nombre firmado a mano en tinta azul sobre datos formales.",
+      font:"Karla, Arial, sans-serif", nf:"Caveat, 'Segoe Script', cursive", fg:"#1F2430", mut:"#666C7A", acc:"#1D3B8B", co:"#1D3B8B", nameC:"#1D3B8B", tint:"#F5F7FC", rule:"1px solid #C9D3EA", nS:31, nW:700,
+      mono:{bg:"#FFFFFF", fg:"#1D3B8B", br:"2px solid #1D3B8B", r:"50%", font:"Caveat, cursive"}}),
+    S({id:"boho", name:"Bohemian", desc:"Cursiva Cormorant, salvia y óxido, con un pequeño ornamento floral.",
+      font:"'Josefin Sans', Arial, sans-serif", nf:"'Cormorant Garamond', Georgia, serif", fg:"#3D2B20", mut:"#7D8B6A", acc:"#B5562F", co:"#B5562F", tint:"#F4ECE1", rule:"1px solid #D8C7B0", nS:25, nW:600, nIt:true, coCase:"uppercase", coLS:2, sep:"✿", sepC:"#7D8B6A", panelR:"40px 40px 0 0",
+      strip:[["#7D8B6A",40],["#D8C7B0",20],["#B5562F",40]], stripH:3, mono:{bg:"#7D8B6A", fg:"#F4ECE1", r:"32px 32px 4px 4px", font:"'Cormorant Garamond', Georgia, serif"}}),
+    S({id:"graffiti", name:"Graffiti", desc:"Nombre en rotulador sobre carbón, con acentos urbanos medidos.",
+      font:"Karla, Arial, sans-serif", nf:"'Permanent Marker', 'Comic Sans MS', sans-serif", fg:"#1E1E1E", mut:"#5A5A5A", acc:"#00A86B", co:"#FF1F8E", tint:"#F1F1EE", rule:"3px solid #1E1E1E", nS:22, nW:400, sep:"✕", sepC:"#FF1F8E", tagIt:false,
+      strip:[["#FF1F8E",30],["#FFE600",28],["#00A86B",42]], stripH:5, mono:{bg:"#1E1E1E", fg:"#FFE600", r:"50%", font:"'Permanent Marker', sans-serif"}}),
+    S({id:"aurora", name:"Aurora", desc:"Azul profundo y turquesa, con la aurora en una franja de cinco tonos.",
+      font:"Outfit, Arial, sans-serif", fg:"#0B1B33", mut:"#5A6B85", acc:"#0E9F8A", co:"#0E9F8A", tint:"#ECF7F6", rule:"1px solid #CBE7E3", nS:19, nW:700, panelR:"14px",
+      strip:[["#2BF5B4",20],["#1FC7C1",20],["#1FB8FF",20],["#5A7BFF",20],["#7B5CFF",20]], stripH:4, mono:{bg:"#0B1B33", fg:"#9FFFE0", r:"50%"}}),
+    S({id:"victorian", name:"Victorian style", desc:"Serif antigua, doble filete dorado y monograma en fraktur.",
+      font:"'IM Fell English', Georgia, 'Times New Roman', serif", base:13.5, fg:"#1E2A22", mut:"#5E5A48", acc:"#9C7A2B", co:"#9C7A2B", nameC:"#1E3B2B", tint:"#F3EEDD", rule:"3px double #9C7A2B", nS:22, nW:400, coCase:"uppercase", coLS:3, sep:"❦", sepC:"#9C7A2B",
+      mono:{bg:"#1E3B2B", fg:"#D8B964", br:"2px solid #9C7A2B", r:"50%", font:"UnifrakturMaguntia, 'Old English Text MT', serif"}})
+  ];
+
+  /* ---------------- estado ---------------- */
+  const $ = s => document.querySelector(s);
+  const form = $("#form");
+  let state = {data:{...DEFAULTS}, icons:"auto", selected:"hand", logoW:104, logoUrl:"", layout:"side-left"};
+  let logo = null; // {data (dataURL png), blob (objectURL), ratio, name, sample}
+  try {
+    const s = JSON.parse(localStorage.getItem("firmario-demo-posada-4") || "null");
+    if (s){ state = {...state, ...s, data:{...DEFAULTS, ...(s.data||{})}}; if (s.logo) logo = s.logo; }
+  } catch(e){}
+  if (!STYLES.some(s=>s.id===state.selected)) state.selected = "editorial";
+  if (!LAYOUT_NAME[state.layout]) state.layout = "horizontal";
+  function save(){
+    try { localStorage.setItem("firmario-demo-posada-4", JSON.stringify({...state, logo: logo && !logo.sample ? {data:logo.data, ratio:logo.ratio, name:logo.name} : null})); }
+    catch(e){ try { localStorage.setItem("firmario-demo-posada-4", JSON.stringify(state)); } catch(_){} }
+  }
+
+  /* ---------------- helpers ---------------- */
+  const esc = v => String(v ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const initials = n => (String(n).trim().split(/\s+/).filter(Boolean).slice(0,2).map(w=>w[0]).join("") || "·").toUpperCase();
+  const webUrl = w => /^https?:\/\//i.test(w) ? w : "https://" + w;
+  const telUrl = p => "tel:" + p.replace(/[^\d+]/g,"");
+  const socialUrl = (net, v) => { v = v.trim(); if (!v) return ""; if (/^https?:\/\//i.test(v)) return v; v = v.replace(/^@/,"");
+    return {facebook:"https://www.facebook.com/", linkedin:"https://www.linkedin.com/in/", instagram:"https://www.instagram.com/", tiktok:"https://www.tiktok.com/@", x:"https://x.com/"}[net] + v; };
+  const sp = n => `<div style="height:${n}px;line-height:${n}px;font-size:1px;">&nbsp;</div>`;
+  const T = (inner, extra="") => `<table role="presentation" cellpadding="0" cellspacing="0" border="0" ${extra} style="border-collapse:collapse;">${inner}</table>`;
+
+  /* ---------------- constructor de firma (tablas + estilos en línea) ---------------- */
+  function buildSignature(st, forExport){
+    const d = state.data, lay = state.layout, mode = modeOf(st), icoCol = (icoOf(st).lc || icoOf(st).col);
+    const F = st.font, NF = st.nf || st.font, B = st.base;
+    const center = lay === "vcenter";
+    const accent = st.acc;
+
+    // logo o monograma de marca
+    let logoHTML;
+    if (logo){
+      const w = state.logoW, h = Math.round(w * logo.ratio);
+      const src = forExport ? (state.logoUrl.trim() || logo.data) : (logo.blob || logo.data);
+      logoHTML = `<img src="${esc(src)}" width="${w}" height="${h}" alt="${esc(d.company || "Logo")}" style="display:block;width:${w}px;height:${h}px;max-width:${w}px;border:0;outline:none;">`;
+    } else {
+      const m = st.mono;
+      logoHTML = T(`<tr><td width="64" height="64" align="center" valign="middle" style="width:64px;height:64px;background:${m.bg};color:${m.fg};${m.br?`border:${m.br};`:""}border-radius:${m.r};font-family:${m.font||NF};font-size:22px;font-weight:bold;text-align:center;line-height:64px;">${esc(initials(d.company || d.name))}</td></tr>`);
+    }
+    if (center) logoHTML = T(`<tr><td align="center">${logoHTML}</td></tr>`, 'align="center"');
+
+    const nameB = `<div style="font-family:${NF};font-size:${st.nS}px;font-weight:${st.nW};line-height:1.2;color:${st.nameC||st.fg};letter-spacing:${st.nLS}px;text-transform:${st.nCase};${st.nIt?"font-style:italic;":""}margin:0;">${esc(d.name)}</div>`
+      + (d.role ? `<div style="font-family:${F};font-size:${B}px;line-height:1.4;color:${st.fg};letter-spacing:${st.roleLS}px;text-transform:${st.roleCase};margin:4px 0 0;">${esc(d.role)}</div>` : "")
+      + (d.company ? `<div style="font-family:${F};font-size:${B-1}px;line-height:1.4;font-weight:bold;color:${st.co};letter-spacing:${st.coLS}px;text-transform:${st.coCase};margin:2px 0 0;">${esc(d.company)}</div>` : "");
+
+    const items = [
+      d.email && {k:"email", t:d.email, h:"mailto:"+d.email},
+      d.mobile && {k:"mobile", t:d.mobile, h:telUrl(d.mobile)},
+      d.phone && {k:"phone", t:d.phone, h:telUrl(d.phone)},
+      d.web && {k:"web", t:d.web, h:webUrl(d.web)},
+      d.address && {k:"address", t:d.address}
+    ].filter(Boolean);
+    const txt = it => it.h ? `<a href="${esc(it.h)}" style="color:${st.fg};text-decoration:none;">${esc(it.t)}</a>` : `<span style="color:${st.fg};">${esc(it.t)}</span>`;
+    const ic = (k, inline) => {
+      if (mode === "none") return "";
+      if (mode === "labels") return `<span style="font-family:${F};font-size:9.5px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:${icoCol};">${LABELS[k]}</span>`;
+      if (mode === "symbols") return `<span style="font-family:Arial,'Segoe UI Symbol',sans-serif;font-size:13px;line-height:1;color:${icoCol};">${SYMBOLS[k]}</span>`;
+      return iconImg(k, mode, st, inline);
+    };
+    const icW = mode==="labels" ? 36 : (mode==="circle"||mode==="square") ? 28 : 22;
+    const stacked = T(items.map(it => `<tr>${mode!=="none"?`<td width="${icW}" valign="middle" style="width:${icW}px;padding:2px 0;">${ic(it.k)}</td>`:""}<td valign="middle" style="padding:2px 0;font-family:${F};font-size:${B}px;line-height:1.45;color:${st.fg};">${txt(it)}</td></tr>`).join(""));
+    const sepH = ` <span style="color:${st.sepC||st.mut};">&nbsp;${st.sep}&nbsp;</span> `;
+    const inline = `<div style="font-family:${F};font-size:${B}px;line-height:1.9;color:${st.fg};text-align:center;">${items.map(it => `<span style="white-space:nowrap;">${mode!=="none"?`${ic(it.k,true)}&nbsp;&nbsp;`:""}${txt(it)}</span>`).join(sepH)}</div>`;
+
+    const so = [["facebook","Facebook"],["linkedin","LinkedIn"],["instagram","Instagram"],["tiktok","TikTok"],["x","X"]].map(([k,l]) => ({k, l, u:socialUrl(k, d[k]||"")})).filter(s=>s.u);
+    let social = "";
+    if (so.length){
+      if (["line","solid","circle","square"].includes(mode)){
+        social = sp(8) + T(`<tr>${so.map(s=>`<td style="padding:0 8px 0 0;"><a href="${esc(s.u)}" style="text-decoration:none;">${iconImg(s.k, mode, st)}</a></td>`).join("")}</tr>`, center?'align="center"':"");
+      } else {
+        social = `<div style="font-family:${F};font-size:${B-1}px;line-height:1.4;margin-top:8px;${center?"text-align:center;":""}">${so.map(s=>`<a href="${esc(s.u)}" style="color:${icoCol};text-decoration:none;font-weight:bold;">${s.l}</a>`).join(sepH)}</div>`;
+      }
+    }
+
+    const R = st.rule;
+    let main;
+    switch(lay){
+      case "columns":
+        main = T(`<tr><td valign="middle" style="padding:0 18px 0 0;">${logoHTML}</td><td valign="middle" style="padding:0 18px;border-left:${R};">${nameB}</td><td valign="middle" style="padding:0 0 0 18px;border-left:${R};">${stacked}${social}</td></tr>`);
+        break;
+      case "vertical":
+        main = T(`<tr><td style="padding:0 0 14px;">${logoHTML}</td></tr><tr><td style="padding:0 0 12px;">${nameB}</td></tr><tr><td style="padding:12px 0 0;border-top:${R};">${stacked}${social}</td></tr>`);
+        break;
+      case "vcenter":
+        main = T(`<tr><td align="center" style="padding:0 0 14px;text-align:center;">${logoHTML}</td></tr><tr><td align="center" style="padding:0 0 12px;text-align:center;">${nameB}</td></tr><tr><td align="center" style="padding:10px 0 0;border-top:${R};text-align:center;">${inline}${social}</td></tr>`, 'align="center"');
+        break;
+      case "side-left":
+      case "side-right": {
+        const left = lay === "side-left";
+        const panel = `<td valign="middle" align="center" style="background:${st.tint};padding:20px 22px;${left?`border-left:4px solid ${accent};`:`border-right:4px solid ${accent};`}border-radius:${st.panelR};text-align:center;">${T(`<tr><td align="center">${logoHTML}</td></tr>`,'align="center"')}</td>`;
+        const gap = `<td width="22" style="width:22px;font-size:1px;">&nbsp;</td>`;
+        const info = `<td valign="middle">${nameB}${sp(10)}${stacked}${social}</td>`;
+        main = T(`<tr>${left ? panel+gap+info : info+gap+panel}</tr>`);
+        break;
+      }
+      default:
+        main = T(`<tr><td valign="middle" style="padding:0 18px 0 0;">${logoHTML}</td><td valign="middle" style="padding:0 0 0 18px;border-left:${R};">${nameB}${sp(10)}${stacked}${social}</td></tr>`);
+    }
+
+    const tag = d.tagline ? `<div style="font-family:${F};font-size:${B-1}px;line-height:1.4;color:${st.mut};margin-top:14px;${st.tagIt?"font-style:italic;":"letter-spacing:1px;"}${center?"text-align:center;":""}">${esc(d.tagline)}</div>` : "";
+    const strip = st.strip ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin-top:14px;"><tr>${st.strip.map(([c,w])=>`<td width="${w}%" height="${st.stripH}" style="background:${c};height:${st.stripH}px;line-height:${st.stripH}px;font-size:1px;">&nbsp;</td>`).join("")}</tr></table>` : "";
+    const legal = d.legal ? `<div style="font-family:Arial,Helvetica,sans-serif;font-size:10px;line-height:1.45;color:#8A8A8A;margin-top:12px;max-width:560px;${center?"text-align:center;":""}">${esc(d.legal)}</div>` : "";
+
+    return `<!-- Firma de correo · ${st.name} · ${LAYOUT_NAME[lay]} · Firmario -->
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;max-width:600px;">
+<tr><td style="padding:0;font-family:${F};color:${st.fg};">
+${main}
+${tag}${strip}${legal}
+</td></tr>
+</table>`;
+  }
+
+  /* ---------------- logo: PNG/SVG → PNG ---------------- */
+  function rasterize(src, name, sample){
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.onload = () => {
+        let w = img.naturalWidth || 480, h = img.naturalHeight || 160;
+        const target = Math.min(640, Math.max(440, w));
+        const scale = target / w; w = Math.round(w*scale); h = Math.round(h*scale);
+        const cv = document.createElement("canvas"); cv.width = w; cv.height = h;
+        cv.getContext("2d").drawImage(img, 0, 0, w, h);
+        const data = cv.toDataURL("image/png");
+        cv.toBlob(b => resolve({data, blob: b ? URL.createObjectURL(b) : null, ratio: h/w, name, sample:!!sample}), "image/png");
+      };
+      img.onerror = () => reject(new Error("No se pudo leer la imagen"));
+      img.src = src;
+    });
+  }
+  const SAMPLE_LOGO = "data:image/png;base64,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";
+  function loadSample(){
+    return rasterize(SAMPLE_LOGO, "Logo Posada de Belén (demo)", true)
+      .then(l => { logo = l; renderAll(); }).catch(()=>{});
+  }
+
+  /* ---------------- render ---------------- */
+  function renderLogoBox(){
+    const th = $("#logo-thumb");
+    th.innerHTML = logo ? `<img src="${esc(logo.blob || logo.data)}" alt="Logo cargado">` : "<span>Sin logo</span>";
+    $("#logo-meta").textContent = logo
+      ? `${logo.name}${logo.sample ? " · reemplázalo por el tuyo" : ""} · se muestra a ${state.logoW} × ${Math.round(state.logoW*logo.ratio)} px`
+      : "Sin logo se usa un monograma con las iniciales de la empresa.";
+    $("#logo-w").value = state.logoW; $("#logo-w-out").textContent = state.logoW + " px";
+  }
+  function renderLayouts(){
+    $("#layouts").innerHTML = LAYOUTS.map(g => `<div class="opt-row"><span>${g.fam}</span>${g.items.map(i =>
+      `<button type="button" class="tile" data-lay="${i.id}" aria-pressed="${state.layout===i.id}"><svg viewBox="0 0 54 32" fill="currentColor" aria-hidden="true">${i.svg}</svg>${i.name}</button>`).join("")}</div>`).join("");
+    $("#lay-name").textContent = LAYOUT_NAME[state.layout];
+  }
+  function renderIcons(){
+    const st = STYLES.find(s=>s.id===state.selected), own = icoOf(st), col = own.lc || own.col;
+    const sampleFor = id => {
+      if (id==="none") return `<span style="color:#999;font-weight:400;letter-spacing:0;text-transform:none;font-size:11px">Solo texto</span>`;
+      if (id==="labels") return ["email","phone","web"].map(k=>`<span style="color:${col}">${LABELS[k]}</span>`).join("");
+      if (id==="symbols") return ["email","phone","web","address"].map(k=>`<span style="color:${col};font-size:14px;letter-spacing:0">${SYMBOLS[k]}</span>`).join("");
+      return ["email","phone","web","linkedin"].map(k=>iconImg(k, id, st)).join("");
+    };
+    const ownName = ICON_MODES.find(m=>m.id===own.mode).name;
+    $("#icons").innerHTML = ICON_MODES.map(m => `<button type="button" class="itile" data-ico="${m.id}" aria-pressed="${state.icons===m.id}"><span class="sample">${sampleFor(m.id==="auto" ? own.mode : m.id)}</span>${m.id==="auto" ? `Según el estilo · ${ownName}` : m.name}</button>`).join("");
+    $("#ico-name").textContent = state.icons==="auto" ? `Según ${st.name} · ${ownName}` : ICON_MODES.find(m=>m.id===state.icons).name;
+  }
+  function renderGrid(){
+    $("#grid").innerHTML = STYLES.map((st,i) => `
+      <article class="card${st.id===state.selected?" is-selected":""}" data-id="${st.id}">
+        <div class="card-meta">
+          <span class="num">${String(i+1).padStart(2,"0")}</span>
+          <div><h3>${st.name}</h3><p>${st.desc}</p></div>
+          <button type="button" class="btn ghost sm use" data-id="${st.id}" aria-pressed="${st.id===state.selected}">${st.id===state.selected?"En uso":"Usar"}</button>
+        </div>
+        <div class="card-paper" data-id="${st.id}">${buildSignature(st, false)}</div>
+      </article>`).join("");
+  }
+  function renderPreview(){
+    const st = STYLES.find(s=>s.id===state.selected);
+    $("#preview").innerHTML = buildSignature(st, false);
+    $("#code").value = buildSignature(st, true);
+    const n = $("#code").value.length, cnt = $("#count");
+    cnt.textContent = `${n.toLocaleString("es")} caracteres · límite de Gmail: 10 000${n > 10000 ? " · superado: indica la URL pública del logo o simplifica la firma" : ""}`;
+    cnt.classList.toggle("over", n > 10000);
+    $("#cur-name").innerHTML = `${esc(st.name)}<small>${esc(LAYOUT_NAME[state.layout])} · iconos ${esc(ICON_MODES.find(m=>m.id===modeOf(st)).name.toLowerCase())}${state.icons==="auto" ? " (del estilo)" : ""}</small>`;
+    $("#m-from").textContent = `${state.data.name || "—"} <${state.data.email || "—"}>`;
+  }
+  function renderAll(){ renderLogoBox(); renderLayouts(); renderIcons(); renderGrid(); renderPreview(); }
+
+  /* ---------------- eventos ---------------- */
+  const fillForm = () => { for (const k in state.data){ const el = form.elements[k]; if (el) el.value = state.data[k]; } $("#logo-url").value = state.logoUrl; };
+  fillForm();
+  let t;
+  const soon = fn => { clearTimeout(t); t = setTimeout(fn, 110); };
+  form.addEventListener("input", e => { if (!e.target.name) return; state.data[e.target.name] = e.target.value; soon(()=>{ renderGrid(); renderPreview(); save(); }); });
+  $("#logo-url").addEventListener("input", e => { state.logoUrl = e.target.value; soon(()=>{ renderPreview(); save(); }); });
+  $("#logo-w").addEventListener("input", e => { state.logoW = +e.target.value; $("#logo-w-out").textContent = state.logoW + " px"; soon(()=>{ renderLogoBox(); renderGrid(); renderPreview(); save(); }); });
+  $("#logo-file").addEventListener("change", e => {
+    const f = e.target.files && e.target.files[0]; e.target.value = "";
+    if (!f) return;
+    const isSvg = /svg/.test(f.type) || /\.svg$/i.test(f.name), isPng = /png/.test(f.type) || /\.png$/i.test(f.name);
+    if (!isSvg && !isPng) return toast("El logo debe ser PNG o SVG.");
+    if (f.size > 3*1024*1024) return toast("El archivo supera 3 MB. Exporta el logo a un tamaño menor.");
+    const r = new FileReader();
+    r.onload = () => rasterize(r.result, f.name, false).then(l => { logo = l; state.noLogo = false; renderAll(); save(); toast(isSvg ? "SVG convertido a PNG y aplicado a las 20 firmas" : "Logo aplicado a las 20 firmas"); })
+      .catch(() => toast("No se pudo leer el archivo. Prueba con otro PNG o SVG."));
+    r.readAsDataURL(f);
+  });
+  $("#logo-remove").addEventListener("click", () => { logo = null; state.noLogo = true; renderAll(); save(); toast("Logo quitado: se usa el monograma de la empresa"); });
+  $("#layouts").addEventListener("click", e => { const b = e.target.closest("[data-lay]"); if (!b) return; state.layout = b.dataset.lay; renderLayouts(); renderGrid(); renderPreview(); save(); });
+  $("#icons").addEventListener("click", e => { const b = e.target.closest("[data-ico]"); if (!b) return; state.icons = b.dataset.ico; renderIcons(); renderGrid(); renderPreview(); save(); });
+  $("#grid").addEventListener("click", e => {
+    if (e.target.closest("a")) e.preventDefault();
+    const el = e.target.closest(".use, .card-paper"); if (!el) return;
+    state.selected = el.dataset.id; renderIcons(); renderGrid(); renderPreview(); save();
+    toast(`${STYLES.find(s=>s.id===state.selected).name} en el estudio`);
+    $("#estudio").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+  $("#preview").addEventListener("click", e => { if (e.target.closest("a")) e.preventDefault(); });
+  $("#reset").addEventListener("click", () => {
+    state.data = {...DEFAULTS}; state.noLogo = false; state.logoUrl = ""; state.logoW = 104; fillForm();
+    loadSample().then(save); toast("Datos y logo de ejemplo restaurados");
+  });
+
+  let tt;
+  function toast(msg){ const el = $("#toast"); el.textContent = msg; clearTimeout(tt); tt = setTimeout(()=>el.textContent="", 3200); }
+  function selectNode(node){ try { const r = document.createRange(); r.selectNodeContents(node); const s = getSelection(); s.removeAllRanges(); s.addRange(r); return document.execCommand("copy"); } catch(e){ return false; } }
+  $("#copy-html").addEventListener("click", () => {
+    const ta = $("#code");
+    const fail = () => { $("details.code").open = true; ta.focus(); ta.select(); toast("Código seleccionado: pulsa Ctrl+C para copiarlo"); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ta.value).then(()=>toast("HTML copiado"), fail); else fail();
+  });
+  $("#copy-rich").addEventListener("click", () => {
+    const html = $("#code").value;
+    const tmp = document.createElement("div"); tmp.innerHTML = html;
+    const ok = () => toast("Firma copiada: pégala en la configuración de firmas de tu correo");
+    const fallback = () => toast(selectNode($("#preview")) ? "Firma copiada: pégala en la configuración de firmas de tu correo" : "Firma seleccionada: pulsa Ctrl+C para copiarla");
+    try {
+      if (window.ClipboardItem && navigator.clipboard && navigator.clipboard.write)
+        navigator.clipboard.write([new ClipboardItem({"text/html": new Blob([html],{type:"text/html"}), "text/plain": new Blob([tmp.innerText],{type:"text/plain"})})]).then(ok, fallback);
+      else fallback();
+    } catch(e){ fallback(); }
+  });
+
+  // arranque
+  if (logo && logo.data && !logo.blob){
+    rasterize(logo.data, logo.name, false).then(l => { logo = l; renderAll(); }).catch(()=>{ logo = null; renderAll(); });
+  } else if (!logo && !state.noLogo) { renderAll(); loadSample(); }
+  else renderAll();
+})();
+</script>
